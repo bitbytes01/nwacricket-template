@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "Videos";
+}
+
+<h2>Videos</h2>
+<script type="text/javascript">
+    $(function () {
+        $("#accordion").accordion({
+            heightStyle: "content",
+            autoHeight: false
+        });
+    });
+</script>
+<style type="text/css">
+    .frame {
+        height: 315px;
+        width: 300px;
+    }
+</style>
+@*<div id="accordion">
+    <h4>
+        <a href="#">Blazers vs University</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/UtcAis_HsM0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/5iz8OvQDH5I" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/jXuKG0IlDtM" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h4>
+        <a href="#">Blazers vs Spartans</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/EbfYk2jA9nA" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/eItSlBA1kjY" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/2TGdu3dW1ss" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/vR-lgR__pTo" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/z29sB8zsIMU" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/gKncHFzdPKk" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+    <h4>
+        <a href="#">SamuriaZ vs Buddies</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/0u_ddw1iu3U" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/I5902NgLJoQ" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/mijBcGTtuqU" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/ymZPvC82woc" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h4>
+        <a href="#">WCC vs Beemers</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/DrjeEvvhTi8" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/-2XilqbcZgg" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/60IK8UhxIfA" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/UtDfbj33LDg" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/M8nCVQv1wBs" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/yL1EK76XYGM" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <h4>
+        <a href="#">UST vs WCC</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/6IZU8pt8bus" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/_2qPB4pqqys" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/uj94iPuH01Y" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/OEuzrrAgewc" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+
+    <h4>
+        <a href="#">Wally vs Buddies</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/4dhNLmOkLyc" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/avjDMee3sl4" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/lXyyvHqf_D4" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/bPfrVA3sDBQ" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/Q0B9p8jRuMc" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/Q2TnYaJQ-YE" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/SYVpL1-eZTk" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/ZSNv-kA2rU8" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/LenigfzSI3A" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <h4>
+        <a href="#">Benton Boys vs Titans</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/_ILUM4efvUg" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/OCVVv7uiP2o" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/W1ZxDH5AiqA" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/KrWsyc6EK9Y" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/b0zs3mP_yk4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h4>
+        <a href="#">Challengers vs Titans</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/ExzczJV_D0U" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/g9CHt89w6iI" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/f7CnaJ6ZO_s" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/cvPP8zop4mI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h4>
+        <a href="#">Rivals vs Wally</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/b4nCquBxlrM" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/bh9IZEsdFhI" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/ZN9JC2XnMNo" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/HCBjFYG6FMs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h4>
+        <a href="#">UST vs Spartans</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/gnr9dsRaQ-0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/ar7OKgQscTo" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/5Ex-hxPvsI8" frameborder="0" allowfullscreen></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/tAw8cXncc7I" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h4>
+        <a href="#">SamuiraiZ vs Titans</a>
+    </h4>
+    <div>
+        <iframe class="frame" src="//www.youtube.com/embed/4AZQLOZ06qw" frameborder="0" allowfullscreen=""></iframe>
+        <iframe class="frame" src="//www.youtube.com/embed/Zcbl62xwb2M" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+
+</div>*@

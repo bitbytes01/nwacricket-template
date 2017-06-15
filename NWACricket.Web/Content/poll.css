@@ -1,0 +1,110 @@
+
+.poll-item {
+    padding: 5px;
+    margin: 2px;
+    border: 2px solid rgb(231, 231, 228);
+    min-height: 120px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.poll-results h1 {
+    font-size: 28px;
+    color: #cc0000;
+    background-color: #FFFFFF;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.poll-results h2 {
+    font-size: 15px;
+    color: gray;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: #FFFFFF;
+}
+
+.poll-results h3 {
+    color: #cc0000;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 300;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+
+.poll-left {
+    clear: both;
+    float: left;
+    font-size: 100%;
+    margin-left: 15px;
+    width: 450px;
+}
+
+/* Bar Graphs */
+.graph {
+    position: relative;
+    right: 30px;
+}
+
+.bar-title {
+    position: relative;
+    float: left;
+    width: 154px;
+    line-height: 20px;
+    margin-right: 17px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.bar-container {
+    position: relative;
+    float: left;
+    width: 110px;
+    height: 10px;
+    margin: 0 0 15px;
+}
+
+    .bar-container div {
+        background-color: #cc4400;
+        height: 20px;
+    }
+
+    .bar-container strong {
+        position: absolute;
+        right: -32px;
+        top: 0px;
+        overflow: hidden;
+    }
+
+.poll-results p {
+    text-align: center;
+}
+
+.submit-poll {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 18;
+    -moz-border-radius: 18;
+    border-radius: 18px;
+    font-family: Arial;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .submit-poll:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }

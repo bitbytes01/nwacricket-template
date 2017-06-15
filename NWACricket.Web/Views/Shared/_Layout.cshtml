@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>@Styles.Render("~/Content/themes/base/css", "~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("scripts", required: false)
+    <meta name="description" content="North West Arkansas Cricket Website" />
+    <!--STYLESHEETS-->
+    <!--MOBILE SPECIFIC STYLESHEET-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <!--GOOGLE WEBFONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:300|Droid+Sans|Happy+Monkey'
+          rel='stylesheet' type='text/css' />
+    
+    <script type="text/javascript">
+        $(function () {
+            $('.input-date').datepicker({
+                dateformat: 'mm/dd/yyyy',
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'show'
+                /*showOn: 'both',
+                icons: { primary: '.ui-icon-calendar' }*/
+            }); //.button({ icons: { primary: 'ui-icon-calendar'} });
+
+            $('.buttontype').button();
+
+            // Requried: Navigation bar drop-down
+            $("nav ul li").hover(function () {
+                $(this).addClass("active");
+                $(this).find("ul").show().animate({ opacity: 1 }, 400);
+            }, function () {
+                $(this).find("ul").hide().animate({ opacity: 0 }, 200);
+                $(this).removeClass("active");
+            });
+
+            // Requried: Addtional styling elements
+            $('nav ul li ul li:first-child').prepend('<li class="arrow"></li>');
+            $('nav ul li:first-child').addClass('first');
+            $('nav ul li:last-child').addClass('last');
+            $('nav ul li ul').parent().append('<span class="dropdown"></span>').addClass('drop');
+
+        });
+
+    </script>
+</head>
+<body>
+   
+    <div id="wrapper">
+        <!--HEADER FOR MOBILES ONLY-->
+        <header id="mobile">
+            <h1>
+                @Html.ActionLink("North West Arkansas Cricket", "Index", "Home")
+            </h1>
+        </header>
+        <!--end mobile-->
+        <header id="main">
+            <div id="masthead">
+                <!--site name or logo-->
+                <h1>
+                    @Html.ActionLink("North West Arkansas Cricket", "Index", "Home")
+                </h1>
+            </div>
+            <div class="battinglogo">
+                &nbsp;
+            </div>
+        </header>
+        <!--End header-->
+        <!--MAIN NAVIGATION BAR-->
+        <div class="activeMenu" id="dark">
+            <nav id="topbar" class="dark">
+                <ul class="clear">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>
+                        <a href="javascript:return(null);">Teams</a>
+                        <ul>
+                            <li>@Html.ActionLink("Players", "Players", "Home")</li>
+                            <li>@Html.ActionLink("Teams", "Teams", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:return(null);">Results</a>
+                        <ul>
+                            <li>@Html.ActionLink("Points Table", "PointsTable", "Home")</li>
+                            <li>@Html.ActionLink("Scorecards", "Results", "Home")</li>
+                            <li>@Html.ActionLink("Statistics", "Stats", "Home")</li>
+                            <li>@Html.ActionLink("All Live Scores", "LiveScores", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:return(null);">Schedules</a>
+                        <ul>
+                            <li>@Html.ActionLink("Schedule", "Schedule", "Home")</li>
+                            <li>@Html.ActionLink("Grounds", "Grounds", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:return(null);">Media</a>
+                        <ul>
+                            <li>@Html.ActionLink("News-Articles", "NewsArticles", "Home")</li>
+                            @*<li>@Html.ActionLink("Videos", "Videos", "Home")</li>*@
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </nav>
+        </div>
+        <!--topbar-->
+        <!--END MAIN NAVIGATION-->
+        <hr />
+        <!--MAIN CONTENT-->
+        <div id="content">
+            @RenderBody()
+        </div>
+        <!--end content-->
+        <!--END MAIN CONTENT-->
+        <!--FOOTER-->
+        <footer>
+            <!--Additional site info and navigation traditionally goes in here-->
+            <hr />
+            <h3>Additional Site Info</h3>
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Players", "Players", "Home")</li>
+                    <li>@Html.ActionLink("Teams", "Teams", "Home")</li>
+                    <li>@Html.ActionLink("Points Table", "PointsTable", "Home")</li>
+                    <li>@Html.ActionLink("Scorecards", "Results", "Home")</li>
+                    <li>@Html.ActionLink("Statistics", "Stats", "Home")</li>
+                    <li>@Html.ActionLink("Schedule", "Schedule", "Home")</li>
+                    <li>@Html.ActionLink("Grounds", "Grounds", "Home")</li>
+                    <li>@Html.ActionLink("News-Articles", "NewsArticles", "Home")</li>
+                    @*<li>@Html.ActionLink("Gallery", "Gallery", "Home")</li>*@
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </nav>
+            <hr />
+        </footer>
+        <!--end footer-->
+        <!--END FOOTER-->
+        <!--BASE-->
+        <section id="base">
+            <!--disclaimers and copyright info usually goes down here-->
+            <h3>Disclaimers And Things</h3>
+            <p>
+                Developed by &copy; Sunil C Nuthalapati & Praveen Dodda
+            </p>
+            <p>
+                Domain Sponsor: Care A Child
+            </p>
+            <a href="http://www.w3.org/html/logo/#the-logo" target="_blank"></a>
+        </section>
+        <!--end base-->
+        <!--END BASE-->
+    </div>
+    <!--end wrapper-->
+</body>
+</html>

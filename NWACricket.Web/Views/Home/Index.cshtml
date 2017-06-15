@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Scripts.Render("~/bundles/weatherfeed")
+@Styles.Render("~/Content/weatherfeed")
+<script type="text/javascript">
+    $(function () {
+        $('#weather').weatherfeed(['USAR0047', 'USAR0485', 'USAR0344'], { unit: 'f', forecast: true });
+    });
+
+</script>
+
+<section id="intro">
+
+    <!--give a brief introduction of your site-->
+    <div class="welcomeheader">
+        <div>
+            <h2>Welcome to NWA Cricket</h2>
+            @*  <span style="position: absolute; top: 30%; left: 80%; padding: 0px; margin: 0px;">
+                    <img src="@Url.Content("~/Content/Images/careachild.jpg")" alt="care a child" width="80px"/>
+                </span>*@
+        </div>
+        <div>
+            <span style="float: right; padding: 0; margin: 0;">
+                <img src="@Url.Content("~/Content/Images/careachild.jpg")" alt="care a child" style="width: 30%; height: 30%" />
+            </span>
+        </div>
+    </div>
+
+</section>
+<section class="columns">
+    <!--large background image goes in here and some text if you require-->
+    <article class="left">
+        <div class="rounded" style="width: 450px; height: 190px; overflow-y: scroll;">
+            <h3>Announcements</h3>
+            <hr class="hr" />
+            <p>
+                Upcoming Games
+            </p>
+            <table id="tblSchedule" style="font-size: 11px;"></table>
+        </div>
+    </article>
+    <article id="livecontent" class="right" style="width: 280px;">
+        <div style="min-height: 180px; padding: 5px; margin: 0; border: 2px solid rgb(231, 231, 228); -moz-border-radius: 5px; border-radius: 5px; font-size: 11px;">
+            <div style="float: left;">
+                <h3>Live Score</h3>
+            </div>
+            <div style="float: right;">
+                <h3>
+                    <a id="refresh" href="javascript:void(null);">Refresh</a>
+                </h3>
+            </div>
+            <hr class="hr" />
+            <div id="livescores">
+            </div>
+
+        </div>
+        @Html.ActionLink("All Live Scores", "LiveScores", "Home")
+    </article>
+    @*<article id="media">
+            <h3>Videos</h3>
+            <figure>
+                <a href='@Url.Action("Videos", "Home")'><img src="http://img.youtube.com/vi/b4nCquBxlrM/default.jpg" width="160" height="100" alt="Lizard Island Australia"></a>
+            </figure>
+            <figure>
+                <a href='@Url.Action("Videos", "Home")'><img src="http://img.youtube.com/vi/5Ex-hxPvsI8/default.jpg" width="160" height="100" alt="Lizard Island Australia"></a>
+            </figure>
+            <figure>
+                <a href='@Url.Action("Videos", "Home")'><img src="http://img.youtube.com/vi/bh9IZEsdFhI/default.jpg" width="160" height="100" alt="Lizard Island Australia"></a>
+            </figure>
+        </article>*@
+    @*<article id="weathercontainer" style="text-align: center; width: 90%;">
+            <hr class="hr" />
+            <h3>Weather Forecast</h3>
+            <hr class="hr" />
+            <div id="weather" class="items"></div>
+            <hr class="hr" />
+        </article>*@
+
+</section>
+<br />
+<br />
+<section id="columns">
+    <!--large background image goes in here and some text if you require-->
+    <articl>
+        @Html.Partial("_Points")
+        @*<br />
+            @Html.ActionLink("First Round Points", "PointsTable", "Home")*@
+    </articl>
+</section>
