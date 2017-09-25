@@ -23,7 +23,7 @@
     <!--GOOGLE WEBFONTS-->
     <link href='http://fonts.googleapis.com/css?family=Oswald:300|Droid+Sans|Happy+Monkey'
           rel='stylesheet' type='text/css' />
-    
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.8"></script>
     <script type="text/javascript">
         $(function () {
             $('.input-date').datepicker({
@@ -57,7 +57,17 @@
     </script>
 </head>
 <body>
-   
+
+    @*<div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>*@
+
     <div id="wrapper">
         <!--HEADER FOR MOBILES ONLY-->
         <header id="mobile">
@@ -91,8 +101,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:return(null);">Results</a>
+                        <a href="javascript:return(null);">T16-2017</a>
                         <ul>
+                            <li>@Html.ActionLink("Round", "Round", "Home")</li>
                             <li>@Html.ActionLink("Points Table", "PointsTable", "Home")</li>
                             <li>@Html.ActionLink("Scorecards", "Results", "Home")</li>
                             <li>@Html.ActionLink("Statistics", "Stats", "Home")</li>
@@ -100,19 +111,30 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:return(null);">Schedules</a>
+                        <a href="javascript:return(null);">T10-2017</a>
                         <ul>
-                            <li>@Html.ActionLink("Schedule", "Schedule", "Home")</li>
-                            <li>@Html.ActionLink("Grounds", "Grounds", "Home")</li>
+                            <li>@Html.ActionLink("Round", "Round", "T102017")</li>
+                            <li>@Html.ActionLink("Points Table", "PointsTable", "T102017")</li>
+                            <li>@Html.ActionLink("Scorecards", "Results", "T102017")</li>
+                            <li>@Html.ActionLink("Statistics", "Stats", "T102017")</li>
+                            <li>@Html.ActionLink("All Live Scores", "LiveScores", "T102017")</li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:return(null);">Media</a>
+                        <a href="javascript:return(null);">Schedules</a>
                         <ul>
-                            <li>@Html.ActionLink("News-Articles", "NewsArticles", "Home")</li>
-                            @*<li>@Html.ActionLink("Videos", "Videos", "Home")</li>*@
+                            <li>@Html.ActionLink("T10 Schedule", "Schedule", "T102017")</li>
+                            <li>@Html.ActionLink("T20 Schedule", "Schedule", "Home")</li>
+                            <li>@Html.ActionLink("Grounds", "Grounds", "Home")</li>
                         </ul>
                     </li>
+                    @*<li>
+                            <a href="javascript:return(null);">Media</a>
+                            <ul>
+                                <li>@Html.ActionLink("News-Articles", "NewsArticles", "Home")</li>
+                                <li>@Html.ActionLink("Videos", "Videos", "Home")</li>
+                            </ul>
+                        </li>*@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </nav>

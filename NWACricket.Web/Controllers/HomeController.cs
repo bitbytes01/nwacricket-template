@@ -90,5 +90,10 @@ namespace NWACricket.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult Round()
+        {
+            return this.View();
+        }
     }
 }

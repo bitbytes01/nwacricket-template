@@ -6,8 +6,10 @@
 <script type="text/javascript">
     $(function () {
         $('#weather').weatherfeed(['USAR0047', 'USAR0485', 'USAR0344'], { unit: 'f', forecast: true });
+        $('.refresh').click(function () {
+            $(document).find(".nav-region li.js-selected a:contains('Live')").click();
+        });
     });
-
 </script>
 
 <section id="intro">
@@ -15,7 +17,7 @@
     <!--give a brief introduction of your site-->
     <div class="welcomeheader">
         <div>
-            <h2>Welcome to NWA Cricket</h2>
+            <h2>Welcome to NWA Cricket Live Scores</h2>
             @*  <span style="position: absolute; top: 30%; left: 80%; padding: 0px; margin: 0px;">
                     <img src="@Url.Content("~/Content/Images/careachild.jpg")" alt="care a child" width="80px"/>
                 </span>*@
@@ -30,61 +32,49 @@
 </section>
 <section class="columns">
     <!--large background image goes in here and some text if you require-->
-    <article class="left">
-        <div class="rounded" style="width: 450px; height: 190px; overflow-y: scroll;">
-            <h3>Announcements</h3>
-            <hr class="hr" />
-            <p>
-                Upcoming Games
-            </p>
-            <table id="tblSchedule" style="font-size: 11px;"></table>
-        </div>
-    </article>
-    <article id="livecontent" class="right" style="width: 280px;">
-        <div style="min-height: 180px; padding: 5px; margin: 0; border: 2px solid rgb(231, 231, 228); -moz-border-radius: 5px; border-radius: 5px; font-size: 11px;">
-            <div style="float: left;">
-                <h3>Live Score</h3>
-            </div>
-            <div style="float: right;">
-                <h3>
-                    <a id="refresh" href="javascript:void(null);">Refresh</a>
-                </h3>
-            </div>
-            <hr class="hr" />
-            <div id="livescores">
+    @*<article class="left">
+            <div class="rounded" style="width: 450px; height: 190px; overflow-y: scroll;">
+                <h3>Announcements</h3>
+                <hr class="hr" />
+                <p>
+                    Upcoming Games
+                </p>
+                <table id="tblSchedule" style="font-size: 11px;"></table>
             </div>
 
-        </div>
-        @Html.ActionLink("All Live Scores", "LiveScores", "Home")
-    </article>
-    @*<article id="media">
-            <h3>Videos</h3>
-            <figure>
-                <a href='@Url.Action("Videos", "Home")'><img src="http://img.youtube.com/vi/b4nCquBxlrM/default.jpg" width="160" height="100" alt="Lizard Island Australia"></a>
-            </figure>
-            <figure>
-                <a href='@Url.Action("Videos", "Home")'><img src="http://img.youtube.com/vi/5Ex-hxPvsI8/default.jpg" width="160" height="100" alt="Lizard Island Australia"></a>
-            </figure>
-            <figure>
-                <a href='@Url.Action("Videos", "Home")'><img src="http://img.youtube.com/vi/bh9IZEsdFhI/default.jpg" width="160" height="100" alt="Lizard Island Australia"></a>
-            </figure>
-        </article>*@
-    @*<article id="weathercontainer" style="text-align: center; width: 90%;">
-            <hr class="hr" />
-            <h3>Weather Forecast</h3>
-            <hr class="hr" />
-            <div id="weather" class="items"></div>
-            <hr class="hr" />
+
+
         </article>*@
 
+    @{
+        var next10Days = DateTime.Now.AddDays(1).ToString("dd-MM-yyyy");
+        var today = DateTime.Now.ToString("dd-MM-yyyy");
+    }
+
+    <div style="text-align: center;">
+        @*<a class="refresh" href="javascript:void(null);">Refresh</a>
+            <br />*@
+        <iframe width="880" border="0" style="border: none;" height="800"
+                src="https://www.crichq.com/plugins/base?width=800&height=600&border=1#clubs/216136/matches/ongoing"></iframe>
+
+    </div>
+
+    <div style="text-align: left;">
+        @Html.ActionLink("All Live Scores", "LiveScores", "T102017")
+    </div>
+    
+    <br />
+    <br />
+    <div style="text-align: center;">
+        <h3>Announcements</h3>
+        <br />
+        <iframe width="880" border="0" style="border: none;" height="800"
+                src="https://www.crichq.com/plugins/base?width=800&height=600&border=1#clubs/216136/matches/upcoming?query=&dates.start_date=@(today)&dates.end_date=@(next10Days)&competition_match_level_id=0&location="></iframe>
+    </div>
+
+
+
 </section>
-<br />
-<br />
-<section id="columns">
-    <!--large background image goes in here and some text if you require-->
-    <articl>
-        @Html.Partial("_Points")
-        @*<br />
-            @Html.ActionLink("First Round Points", "PointsTable", "Home")*@
-    </articl>
-</section>
+
+
+    

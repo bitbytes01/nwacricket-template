@@ -146,6 +146,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\T102017Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,6 +243,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\cascading.dropdowns.js" />
     <Content Include="Scripts\grid.locale-en.js" />
+    <None Include="Properties\PublishProfiles\deployment.pubxml" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
@@ -288,6 +290,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Videos.cshtml" />
+    <Content Include="Views\Home\Round.cshtml" />
+    <Content Include="Views\T102017\Round.cshtml" />
+    <Content Include="Views\T102017\PointsTable.cshtml" />
+    <Content Include="Views\T102017\Stats.cshtml" />
+    <Content Include="Views\T102017\LiveScores.cshtml" />
+    <Content Include="Views\T102017\Results.cshtml" />
+    <Content Include="Views\T102017\Schedule.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Points.cshtml" />
